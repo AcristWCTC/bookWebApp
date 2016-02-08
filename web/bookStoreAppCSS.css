@@ -10,6 +10,10 @@ and open the template in the editor.
 
 body{
     background: beige;
+    background-image: url("product_1020_full_1.jpg");
+    background-size: 1080px;
+    background-repeat: no-repeat;
+    background-position:inherit;
     
 }
 form{
@@ -35,5 +39,9 @@ form{
 
 span{
     display: block;
+}
+.bodyItems{
+    padding-left:15%;
+    padding-top: 5%;
 }
 
