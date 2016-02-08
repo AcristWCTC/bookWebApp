@@ -29,10 +29,13 @@
         <table class="table-striped table-bordered col-sm-6 tableCustom">
             <TH class = "col-sm-4">Name</th>
             <TH class = "col-sm-2">Id</th>
+            <TH class = "col-sm-2">Date Added</th>
                 <c:forEach items="${MyList}" var="current">
                 <tr>
                     <td class = "col-sm-4"><c:out value="${current.authorName}" /></td>
                     <td class = "col-sm-2"><c:out value="${current.authorId}" /></td>
+                    <td class = "col-sm-6"><fmt:formatDate pattern="yyyy-MM-dd" 
+                                    value="${current.dateAdded}" /></td>
                 </tr>
             </c:forEach>
         </table>
