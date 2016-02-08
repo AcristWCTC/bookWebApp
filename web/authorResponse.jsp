@@ -16,7 +16,8 @@
         <title>Author Info Page</title>
     </head>
     <body>
-        <h1>Author Info</h1>
+        <h1 class="col-sm-12">Author Info</h1>
+        <h1 class="col-sm-4"><img src="index.png" alt=""/><h1>
 
         <%
             Object responseObj = request.getAttribute("myMsg");
@@ -25,16 +26,17 @@
 
         %>
 
-        <table class="table table-striped table-bordered table-condensed table-responsive">
-            <TH>Name</th>
-            <TH>Id</th>
+        <table class="table-striped table-bordered col-sm-6 tableCustom">
+            <TH class = "col-sm-4">Name</th>
+            <TH class = "col-sm-2">Id</th>
                 <c:forEach items="${MyList}" var="current">
                 <tr>
-                    <td><c:out value="${current.authorName}" /></td>
-                    <td><c:out value="${current.authorId}" /></td>
+                    <td class = "col-sm-4"><c:out value="${current.authorName}" /></td>
+                    <td class = "col-sm-2"><c:out value="${current.authorId}" /></td>
                 </tr>
             </c:forEach>
         </table>
+        <div class ="col-sm-6"></div>
 
 
 

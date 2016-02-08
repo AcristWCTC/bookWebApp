@@ -8,6 +8,10 @@ and open the template in the editor.
     Author     : Adam
 */
 
+body{
+    background: beige;
+    
+}
 form{
     text-align: left;
     font-size: 30px;
@@ -15,52 +19,18 @@ form{
     padding-bottom: 36px;
     
 }
-.RectangleCalculator{
-    background-color: blue;
-}
 
-.CircleCalculator{
-    background-color: white;
-}
-.TriangleCalculator{
-    background-color: red;
-    
-}
-.button{
-border-radius: 25%;
-font-size: 24px;
-
-}
-
-.button:hover {
-    background-color: #000000; 
-    color: white;
-}
-.img3{
-    position: absolute;
-    top: 60%;
-    right: 50%;
-
-}
-
-.img2{
-    position: absolute;
-    top: 36%;
-    right: 50%;
-
-}
-
-.img{
-    position: absolute;
-    top: 13%;
-    right: 50%;
-
-}
 .result{
     font-size: 30px;
     color: black;
     font-style:italic;
     
+}
+.IDCol{
+    width: 80px;
+}
+.NameCol{
+    width: 200px;
 }
 
 span{
