@@ -22,7 +22,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "AuthorController", urlPatterns = {"/AuthorController"})
 public class AuthorController extends HttpServlet {
-
     private static final String DEST_PAGE = "/authorResponse.jsp";
 
     /**
