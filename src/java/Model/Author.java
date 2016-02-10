@@ -23,7 +23,6 @@ public class Author {
         this.authorId = authorId;
     }
     
-    // Get rid of?
     public Author(int authorId, String authorName, Date dateAdded) {
         this.authorId = authorId;
         this.authorName = authorName;

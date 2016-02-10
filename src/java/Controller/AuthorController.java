@@ -1,11 +1,9 @@
-package Controller;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package Controller;
 
 import Model.AuthorService;
 import java.io.IOException;
@@ -26,7 +24,6 @@ import javax.servlet.http.HttpServletResponse;
 public class AuthorController extends HttpServlet {
 
     private static final String DEST_PAGE = "/authorResponse.jsp";
-    String responseMsg = null;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,26 +34,24 @@ public class AuthorController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-       protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
         try (PrintWriter out = response.getWriter()) {
 
-            
             AuthorService authorSrv = new AuthorService();
             List responseMsg = authorSrv.retriveAuthors();
-            
+
             request.setAttribute("myMsg", responseMsg);
-            
-                    RequestDispatcher view
-                = request.getRequestDispatcher(DEST_PAGE);
-        view.forward(request, response);
+
+            RequestDispatcher view
+                    = request.getRequestDispatcher(DEST_PAGE);
+            view.forward(request, response);
 
         } catch (Exception e) {
             request.setAttribute("errorMsg", e.getMessage());
         }
-
 
     }
 
@@ -72,19 +67,7 @@ public class AuthorController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-
-        try (PrintWriter out = response.getWriter()) {
-            String age = request.getParameter("age");
-            String responseMsg = "You are " + age + " years old";
-            request.setAttribute("myMsg", responseMsg);
-
-            RequestDispatcher view
-                    = request.getRequestDispatcher("/helloResponse.jsp");
-            view.forward(request, response);
-        } catch (Exception e) {
-            request.setAttribute("errorMsg", e.getMessage());
-        }
+        processRequest(request, response);
     }
 
     /**
