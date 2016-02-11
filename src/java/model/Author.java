@@ -31,27 +31,27 @@ public class Author {
     
     
 
-    public final void setAuthorId(int authorId) {
+    public void setAuthorId(int authorId) {
         this.authorId = authorId;
     }
 
-    public final void setAuthorName(String authorName) {
+    public void setAuthorName(String authorName) {
         this.authorName = authorName;
     }
 
-    public final void setDateAdded(Date dateAdded) {
+    public void setDateAdded(Date dateAdded) {
         this.dateAdded = dateAdded;
     }
 
-    public final int getAuthorId() {
+    public int getAuthorId() {
         return authorId;
     }
 
-    public final String getAuthorName() {
+    public String getAuthorName() {
         return authorName;
     }
 
-    public final Date getDateAdded() {
+    public Date getDateAdded() {
         return dateAdded;
     }
 
